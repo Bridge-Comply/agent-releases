@@ -1,0 +1,25 @@
+{
+  "version": "v0.2.0",
+  "source_repository": "Bridge-Comply/agent",
+  "source_commit": "b7e615861ecddce5a09449a06110ec93cecc18dc",
+  "source_tag": "v0.2.0",
+  "package": "BridgeComplyAgent-v0.2.0-macos.pkg",
+  "sha256": "dba8b52e1868d9e4bd50d027928cd17f6e59b7db5704fea167edd317da8b6db2",
+  "architectures": [
+    "arm64",
+    "x86_64"
+  ],
+  "apple_team_id": "72RPH63P5M",
+  "notarisation": {
+    "status": "Accepted",
+    "submission_id": "aa27d735-4d68-4866-906c-074766f9f3bf"
+  },
+  "verification": [
+    "pkgutil --check-signature",
+    "spctl --assess --type install -vv",
+    "xcrun stapler validate",
+    "codesign --verify --deep --strict",
+    "embedded version and pinned CONFIG_KEY_ID",
+    "filter designated requirement equals MDM profile"
+  ]
+}
